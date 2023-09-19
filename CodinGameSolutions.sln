@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CODE_ROYALE", "CODE_ROYALE\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerChallenge2023", "SummerChallenge2023\SummerChallenge2023.csproj", "{D7EB8311-78D2-4EFD-9AC2-0C39365A9AEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code vs Zombies", "Code vs Zombies\Code vs Zombies.csproj", "{7C31D204-C3B9-422F-818A-25463BF6835C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D7EB8311-78D2-4EFD-9AC2-0C39365A9AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7EB8311-78D2-4EFD-9AC2-0C39365A9AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7EB8311-78D2-4EFD-9AC2-0C39365A9AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C31D204-C3B9-422F-818A-25463BF6835C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C31D204-C3B9-422F-818A-25463BF6835C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C31D204-C3B9-422F-818A-25463BF6835C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C31D204-C3B9-422F-818A-25463BF6835C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
