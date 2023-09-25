@@ -1,27 +1,27 @@
-﻿using System;
+﻿
+using System;
 
-var inputs = Console.ReadLine().Split(' ');
-var exit = int.Parse(inputs[4]); 
-var ne = int.Parse(inputs[7]); // number of elevators
+var inp = P();
+
+var (ex,ne) = (Ip(4),Ip(7));
+
 var e = new int[ne];
 for (var i = 0; i < ne; i++)
 {
-    var l = Console.ReadLine().Split(' ');
-    e[int.Parse(l[0])] = int.Parse(l[1]);
+    P();
+    e[Ip(0)] = Ip(1);
 }
 
-var lastPos = 0;
+var lp = 0;
 while (true)
 {
-    inputs = Console.ReadLine().Split(' ');
-    var(cf,cp) = (int.Parse(inputs[0]),int.Parse(inputs[1]));
-    if (cf == -1)
-    {
-        Console.WriteLine("WAIT");
-        continue;
-    }
-    var d = cf >= ne ? exit : e[cf];
-    
-    Console.WriteLine(Math.Abs(cp - d) > Math.Abs(lastPos - d) ? "BLOCK" : "WAIT");
-    lastPos = cp;
+    P();
+    var(cf,cp)=(Ip(0),Ip(1));
+    var sk=cf==-1;
+    var d=cf>=ne|sk?ex:e[cf];
+    Console.WriteLine(sk|Math.Abs(cp - d) <= Math.Abs(lp - d) ? "WAIT" : "BLOCK");
+    lp = sk?lp:cp;
 }
+
+string[] P() => inp = Console.ReadLine().Split(' ');
+int Ip(int i) => int.Parse(inp[i]);
