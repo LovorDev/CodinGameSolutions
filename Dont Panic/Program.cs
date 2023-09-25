@@ -1,27 +1,23 @@
-﻿
-using System;
+﻿using System;
 
-var inp = P();
+var r = P();
 
-var (ex,ne) = (Ip(4),Ip(7));
+var (x,n) = (I(4),I(7));
 
-var e = new int[ne];
-for (var i = 0; i < ne; i++)
+var e = new int[n+1];
+e[n] = x;
+for (var i = 0; i < n; i++)
 {
     P();
-    e[Ip(0)] = Ip(1);
+    e[I(0)] = I(1);
 }
 
-var lp = 0;
-while (true)
+for(;;)
 {
     P();
-    var(cf,cp)=(Ip(0),Ip(1));
-    var sk=cf==-1;
-    var d=cf>=ne|sk?ex:e[cf];
-    Console.WriteLine(sk|Math.Abs(cp - d) <= Math.Abs(lp - d) ? "WAIT" : "BLOCK");
-    lp = sk?lp:cp;
+    var (f,p, d) = (I(0),I(1), r[2][0]=='R'?1:-1);
+    Console.WriteLine((p-e[f==-1?n:f])*d<=0&f>=0? "WAIT" : "BLOCK");
 }
 
-string[] P() => inp = Console.ReadLine().Split(' ');
-int Ip(int i) => int.Parse(inp[i]);
+string[]P() => r = Console.ReadLine().Split(' ');
+int I(int i) => int.Parse(r[i]);
