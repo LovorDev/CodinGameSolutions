@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "There is no Spoon - Episode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code of the Rings", "Code of the Rings\Code of the Rings.csproj", "{2156485E-BCDF-47F7-8533-E6BB9A4DB979}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dont Panic", "Dont Panic\Dont Panic.csproj", "{67398E03-37FC-4DB4-A7C7-5339154170D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{2156485E-BCDF-47F7-8533-E6BB9A4DB979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2156485E-BCDF-47F7-8533-E6BB9A4DB979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2156485E-BCDF-47F7-8533-E6BB9A4DB979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67398E03-37FC-4DB4-A7C7-5339154170D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67398E03-37FC-4DB4-A7C7-5339154170D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67398E03-37FC-4DB4-A7C7-5339154170D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67398E03-37FC-4DB4-A7C7-5339154170D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
