@@ -146,7 +146,6 @@ class Player
         
         if (aboveFlat)
         {
-            
             var distanceToSurface = position.Y - flatSurface.Center.Y;
 
             if (direction == 1)
@@ -165,11 +164,10 @@ class Player
                 }
             }
 
-
-
             
             const float g = -3.711f;
-            var landingVelo = CalculateFinalVelocity(speed.Y, g + trust, distanceToSurface);
+            var landingVelo = CalculateFinalVelocity(speed.Y, g + trust * Math.Cos(rotation), distanceToSurface);
+            
             trust = landingVelo switch
             {
                 > 40 => 4,
@@ -207,9 +205,9 @@ class Player
 
     public static float CalculateFinalVelocity(float initialVelocity, double g, float s)
     {
-        var poweredCalculation = Math.Pow(initialVelocity, 2) + 2 * g * s;
+        var poweredCalculation = (Math.Pow(initialVelocity, 2) + 2 * Math.Abs(g) * s);
         var velocityOnLand = (float)Math.Sqrt(poweredCalculation);
-        Console.Error.WriteLine($"velocityOnLand: {velocityOnLand}");
+        Console.Error.WriteLine($"velocityOnLand: {velocityOnLand}. g={g:F} s={s:F}");
         return velocityOnLand;
     }
 
